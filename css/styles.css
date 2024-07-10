@@ -1,0 +1,152 @@
+body, html {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent body from scrolling */
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar {
+    padding: 1%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+}
+
+.left-sidebar {
+    background-color: #ffffff;
+    left: 0;
+    width: 19%;
+}
+
+.right-sidebar {
+    background-color: #ffffff;
+    right: 0;
+    width: 19%;
+}
+
+.sidebar .name {
+    text-align: center;
+}
+
+.sidebar .profile-photo {
+    width: 75%;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sidebar .summary {
+    margin-top: 20px;
+}
+
+.sidebar .links {
+    display: block;
+    margin: 10px 0;
+    color: #000000; /* Example color for links */
+    text-decoration: none;
+    text-align: center;
+}
+
+.sidebar .links a:visited {
+    color: #000000; /* Ensure the visited color matches the unvisited color */
+    text-decoration: none; /* Remove underline for visited links */
+}
+
+.main-content {
+    margin-left: 20%; /* Leave space for the fixed left sidebar */
+    margin-right: 20%; /* Leave space for the fixed right sidebar */
+    overflow-y: auto; /* Enable scrolling for the main content */
+    width: 60%; /* Ensure it occupies the remaining space */
+    height: 100vh;
+    padding: 5%;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+
+.nav-bar {
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    position: fixed;
+}
+
+.nav-bar a {
+    color: #000000;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.nav-links {
+    display: flex;
+    text-decoration-skip-ink: none; /* Prevent the underline from being interrupted by descenders */
+}
+
+.nav-links a {
+    padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+.nav-links a.current {
+    text-decoration: underline;
+    text-decoration-thickness: 3px; /* Match the thickness used on hover */
+}
+
+.separator {
+    border: 0;
+    height: 1px;
+    background: #000000; /* Adjust color as needed */
+    margin: 40px 0;
+}
+
+@media (max-width: 600px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a {
+        text-align: center;
+        padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.project-photo {
+    width: 25%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.certificate-photo {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle Darden - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar left-sidebar">
+            <h1 class="name">Kyle Darden</h1>
+            <img src="assets/images/profile_picture.jpg" alt="Your Photo" class="profile-photo">
+            <div class="summary">
+                <p>Hello! I’m a passionate and detail-oriented aspiring data scientist/analyst eager to leverage my analytical skills and technical expertise to solve real-world problems. With a solid foundation in data analysis, statistical modeling, and data visualization, I am committed to transforming complex data into actionable insights.</p>
+                <p>I recently completed a post graduate program in Machine Learning and AI from McCombs School of Business at The University of Austin with a 4.22/4.33 GPA.</p>
+            </div>
+            <div class="links">
+                <a href="https://github.com/dardenkyle" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/kyle-darden" target="_blank">LinkedIn</a>
+                <a href="https://www.kaggle.com/kyledarden" target="_blank">Kaggle</a>
+            </div>
+        </div>
+        <div class="sidebar right-sidebar">
+            <!-- Right sidebar content (left blank intentionally) -->
+        </div>
+        <div class="main-content">
+            <nav class="nav-bar">
+                <div class="nav-links">
+                    <a href="index.html" class="current">Projects</a>
+                    <a href="certificates.html">Certificates</a>
+                    <a href="about.html">About</a>
+                    <!-- <a href="contact.html">Contact</a> -->
+                </div>
+            </nav>
+            <div class="project">
+                <h2>Bank Churn Prediction</h2>
+                <p>Predicted bank churn using ANNs. Achieved 78% recall score to minimize false negatives, resulting in only 5.75% false negatives on the test data.</p>
+                <img src="assets/images/bank_churn_loss.png" alt="Project 1" class="project-photo">
+                <img src="assets/images/bank_churn_cm.png" alt="Project 1" class="project-photo">
+                <p><strong>Tags:</strong> ANN, Recall Optimization, Banking Analytics, Python, Data Visualization</p>
+            </div>
+            <hr class="separator">
+            <div class="project">
+                <h2>Credit Card User Churn Prediction</h2>
+                <p>Predicted CC users churn by using multiple classifiers and tuning the best performing. Determined most important factors contributing to CC users churn. Recall was maximized to minimize the number of CC users that would churn, resulting in 0.99% false negatives.</p>
+                <img src="assets/images/credit_card_churn_importance.png" alt="Project 2" class="project-photo">
+                <img src="assets/images/credit_card_churn_cm.png" alt="Project 2" class="project-photo">
+                <p><strong>Tags:</strong> Classifier Tuning, Feature Importance, Recall Maximization, Financial Analytics, Python</p>
+            </div>
+            <hr class="separator">
+            <div class="project">
+                <h2>Seedling Classification using CNNs</h2>
+                <p>Classified images of seedling using CNNs.</p>
+                <img src="assets/images/seedling_classification_accuracy.png" alt="Project 3" class="project-photo">
+                <img src="assets/images/seedling_classification_seedling.png" alt="Project 3" class="project-photo">
+                <p><strong>Tags:</strong> CNN, Image Classification, Agricultural Analytics, Python, Deep Learning</p>
+            </div>
+            <hr class="separator">
+            <!-- Add more projects as needed -->
+        </div>
+    </div>
+</body>
+</html>
