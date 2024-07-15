@@ -161,3 +161,10 @@ body, html {
     height: auto;
     border-radius: 8px;
 }
+
+.certificate-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    width: 100%; /* Ensure the container takes the full width of its parent */
+    height: 100%; /* Optional: Adjust the height as needed */
+}
