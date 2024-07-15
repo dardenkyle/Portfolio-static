@@ -50,17 +50,28 @@ body, html {
 }
 
 .sidebar .links {
-    display: block;
+    display: flex;
+    justify-content: center; /* Center vertically */
+    height: 100%;
+}
+
+.sidebar .links a{
     margin: 10px 0;
     color: #000000; /* Example color for links */
     text-decoration: none;
-    text-align: center;
+    padding: 2px;
 }
 
 .sidebar .links a:visited {
     color: #000000; /* Ensure the visited color matches the unvisited color */
     text-decoration: none; /* Remove underline for visited links */
 }
+
+.sidebar .links a:hover {
+    color: #000000; /* Ensure the visited color matches the unvisited color */
+    text-decoration: underline; /* Remove underline for visited links */
+}
+
 
 .main-content {
     margin-left: 20%; /* Leave space for the fixed left sidebar */
