@@ -51,7 +51,7 @@ CATEGORY_TEMPLATE = """
                     <a href="/">Home</a>
                     <a href="/projects/">Projects</a>
                     <a href="/certificates/">Certificates</a>
-                    <!-- <a href="contact.html">Contact</a> -->
+                    <a href="/contact/">Contact</a>
                 </div>
             </nav>
             <h1>{category}</h1>
@@ -130,7 +130,7 @@ POST_TEMPLATE = """
                     <a href="/">Home</a>
                     <a href="/projects/">Projects</a>
                     <a href="/certificates/">Certificates</a>
-                    <!-- <a href="contact.html">Contact</a> -->
+                    <a href="/contact/">Contact</a>
                 </div>
             </nav>
             <article>
@@ -177,14 +177,15 @@ updates_html = ""
 for post in sorted(posts, key=lambda x: x["date"], reverse=True)[:5]:
     updates_html += f"""
     <article>
-        <h2><a href=\"posts/{post['filename']}\", class="updates_title">{post['title']}</a></h2>
+        <h4><a href=\"posts/{post['filename']}\", class="updates_title">{post['title']}</a></h4>
         <p>{post['summary']}</p>
         <p class=\"date\">Posted on {post['date']}</p>
         <hr class="separator_category">
     </article>
     """
 
-UPDATES_TEMPLATE = """<!DOCTYPE html>
+UPDATES_TEMPLATE = """
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -220,6 +221,8 @@ UPDATES_TEMPLATE = """<!DOCTYPE html>
                     <a href="/contact/">Contact</a>
                 </div>
             </nav>
+            <h2 class="title">Recent Updates</h2>
+            <hr class="separator_category">
             <section class=\"updates\">
             {updates}
             </section>

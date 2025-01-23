@@ -87,6 +87,11 @@ body, html {
     box-sizing: border-box; /* Ensure padding doesn't cause overflow */
 }
 
+.main-content .title {
+    font-size: 2rem;
+    text-align: left;
+}
+
 .nav-bar {
     top: 0;
     width: 100%;
@@ -124,9 +129,11 @@ body, html {
     text-decoration-thickness: 3px; /* Match the thickness used on hover */
 }
 
+
+
 a.updates_title {
     color: #000000;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-decoration: none;
 }
 
