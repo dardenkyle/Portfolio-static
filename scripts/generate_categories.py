@@ -48,7 +48,7 @@ CATEGORY_TEMPLATE = """
         <div class="main-content">
             <nav class="nav-bar">
                 <div class="nav-links">
-                    <a href="/">Updates</a>
+                    <a href="/">Home</a>
                     <a href="/projects/">Projects</a>
                     <a href="/certificates/">Certificates</a>
                     <!-- <a href="contact.html">Contact</a> -->
@@ -127,7 +127,7 @@ POST_TEMPLATE = """
         <div class="main-content">
             <nav class="nav-bar">
                 <div class="nav-links">
-                    <a href="/">Updates</a>
+                    <a href="/">Home</a>
                     <a href="/projects/">Projects</a>
                     <a href="/certificates/">Certificates</a>
                     <!-- <a href="contact.html">Contact</a> -->
@@ -214,10 +214,10 @@ UPDATES_TEMPLATE = """<!DOCTYPE html>
         <div class="main-content">
             <nav class="nav-bar">
                 <div class="nav-links">
-                    <a href="/" class="current">Updates</a>
+                    <a href="/" class="current">Home</a>
                     <a href="/projects/">Projects</a>
                     <a href="/certificates/">Certificates</a>
-                    <!-- <a href="contact.html">Contact</a> -->
+                    <a href="/contact/">Contact</a>
                 </div>
             </nav>
             <section class=\"updates\">
