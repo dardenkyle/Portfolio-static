@@ -72,24 +72,29 @@ CATEGORY_TEMPLATE = """
 output_dir = os.path.join(root_dir, "..", "category")
 os.makedirs(output_dir, exist_ok=True)
 
+unique_tags = set()
+
 for category, posts_list in categories.items():
     posts_html = ""
     for post in posts_list:
         # Generate links for categories at the end of each post
-        sorted_categories = sorted(post["categories"])
         category_links = ", ".join(
-            f"<a href='{category.lower().replace(' ', '-')}.html' class='category_category_link'>{category}</a>" for category in sorted_categories
+            f"<a href='../category/{cat.lower().replace(' ', '-')}.html' class='category_category_link'>{cat}</a>" 
+            for cat in post["categories"]
         )
+
         posts_html += f"""
         <article>
             <h2><a href="../posts/{post['filename']}" class="category_post_link">{post['title']}</a></h2>
             <hr class="separator_category">
-            <p>All Categories: {category_links}</p>
+            <p>Categories: {category_links}</p>
         </article>
         """
     category_page = CATEGORY_TEMPLATE.format(category=category, posts=posts_html)
     with open(os.path.join(output_dir, f"{category.lower().replace(' ', '-')}.html"), "w") as file:
         file.write(category_page)
+
+
 
 print("Category pages generated successfully!")
 
