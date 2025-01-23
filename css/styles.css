@@ -124,6 +124,64 @@ body, html {
     text-decoration-thickness: 3px; /* Match the thickness used on hover */
 }
 
+.post a {
+    color: #000000;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.post a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+.post .separator {
+    border: 0;
+    height: 1px;
+    background: #000000; /* Adjust color as needed */
+    margin: 20px 0;
+}
+
+a.post_category_links {
+    color: #000000;
+    text-decoration: none;
+    padding: 0rem 0rem;
+}
+
+a.post_category_links:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+a.category_post_link {
+    color: #000000;
+    text-decoration: none;
+    padding: 0rem 0rem;
+}
+
+a.category_post_link:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+a.category_category_link {
+    color: #000000;
+    text-decoration: none;
+    padding: 0rem 0rem;
+}
+
+a.category_category_link:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+.separator_category {
+    border: 0;
+    height: 1px;
+    background: #000000; /* Adjust color as needed */
+    margin: 10px 0;
+}
+
 .separator {
     border: 0;
     height: 1px;
