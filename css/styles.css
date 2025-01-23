@@ -226,6 +226,17 @@ a.category_category_link:hover {
     }
 }
 
+a.project-link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+a.project-link:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
 .project {
     margin-bottom: 40px;
 }
