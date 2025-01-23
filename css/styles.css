@@ -124,6 +124,17 @@ body, html {
     text-decoration-thickness: 3px; /* Match the thickness used on hover */
 }
 
+a.updates_title {
+    color: #000000;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+a.updates_title:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
 .post a {
     color: #000000;
     font-size: 1.5rem;

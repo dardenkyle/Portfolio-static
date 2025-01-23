@@ -168,3 +168,71 @@ for post in posts:
         file.write(post_content)
 
 print("Post pages generated successfully!")
+
+# Update the updates (index) page
+updates_page_path = os.path.join(root_dir, "..", "index.html")
+updates_html = ""
+for post in sorted(posts, key=lambda x: x["date"], reverse=True)[:5]:
+    updates_html += f"""
+    <article>
+        <h2><a href=\"posts/{post['filename']}\", class="updates_title">{post['title']}</a></h2>
+        <p>{post['summary']}</p>
+        <p class=\"date\">Posted on {post['date']}</p>
+        <hr class="separator_category">
+    </article>
+    """
+
+UPDATES_TEMPLATE = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle Darden - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="assets/images/ann_favicon_16px.png">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar left-sidebar">
+            <h1 class="name">Kyle Darden</h1>
+            <img src="assets/images/profile_picture.jpg" alt="Your Photo" class="profile-photo">
+            <div class="summary">
+                <p>I am a passionate and detail-oriented aspiring data scientist/analyst eager to leverage my analytical skills and technical expertise to solve real-world problems. With a solid foundation in data analysis, statistical modeling, and data visualization, I am committed to transforming complex data into actionable insights.</p>
+                <p>I recently completed a post graduate program in Machine Learning and AI from McCombs School of Business at The University of Austin with a 4.22/4.33 GPA.</p>
+            </div>
+            <div class="links">
+                <a href="https://github.com/dardenkyle" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/kyle-darden" target="_blank">LinkedIn</a>
+                <a href="https://www.kaggle.com/kyledarden" target="_blank">Kaggle</a>
+            </div>
+        </div>
+        <div class="sidebar right-sidebar">
+            <!-- Right sidebar content (left blank intentionally) -->
+        </div>
+        <div class="main-content">
+            <nav class="nav-bar">
+                <div class="nav-links">
+                    <a href="/" class="current">Updates</a>
+                    <a href="/projects/">Projects</a>
+                    <a href="/certificates/">Certificates</a>
+                    <!-- <a href="contact.html">Contact</a> -->
+                </div>
+            </nav>
+            <section class=\"updates\">
+            {updates}
+            </section>
+            <footer>
+                <p>&copy; 2025 Kyle Darden. All rights reserved.</p>
+            </footer>                   
+        </div>
+    </div>
+    
+</body>
+</html>
+
+"""
+
+with open(updates_page_path, "w") as file:
+    file.write(UPDATES_TEMPLATE.format(updates=updates_html))
+
+print("Updates page generated successfully!")

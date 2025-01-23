@@ -4,6 +4,16 @@
         "categories": ["Machine Learning", "Real Estate", "Python"],
         "filename": "ai-in-real-estate.html",
         "date": "2025-01-10",
-        "content": "Test content from JSON"
+        "content": "Test content from JSON",
+        "summary": "This article explores how AI is transforming the real estate investment landscape."
+    }
+,
+    { 
+        "title": "Updated website with new features",
+        "categories": ["HTML", "CSS", "Python", "JSON", "Web Development", "Scripting", "Automation", "Website Updates"],
+        "filename": "website-update.html",
+        "date": "2025-01-22",
+        "content": "Test content from JSON",
+        "summary": "This article discusses the new features added to the website and how they improve user experience."
     }
 ]

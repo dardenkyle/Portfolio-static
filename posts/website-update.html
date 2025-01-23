@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle Darden - Portfolio</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="assets/images/ann_favicon_16px.png">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar left-sidebar">
+            <h1 class="name">Kyle Darden</h1>
+            <img src="../assets/images/profile_picture.jpg" alt="Your Photo" class="profile-photo">
+            <div class="summary">
+                <p>I am a passionate and detail-oriented aspiring data scientist/analyst eager to leverage my analytical skills and technical expertise to solve real-world problems. With a solid foundation in data analysis, statistical modeling, and data visualization, I am committed to transforming complex data into actionable insights.</p>
+                <p>I recently completed a post graduate program in Machine Learning and AI from McCombs School of Business at The University of Austin with a 4.22/4.33 GPA.</p>
+            </div>
+            <div class="links">
+                <a href="https://github.com/dardenkyle" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/kyle-darden" target="_blank">LinkedIn</a>
+                <a href="https://www.kaggle.com/kyledarden" target="_blank">Kaggle</a>
+            </div>
+        </div>
+        <div class="sidebar right-sidebar">
+            <!-- Right sidebar content (left blank intentionally) -->
+        </div>
+        <div class="main-content">
+            <nav class="nav-bar">
+                <div class="nav-links">
+                    <a href="/">Updates</a>
+                    <a href="/projects/">Projects</a>
+                    <a href="/certificates/">Certificates</a>
+                    <!-- <a href="contact.html">Contact</a> -->
+                </div>
+            </nav>
+            <h1>Automating Content Management for My Website: A Deep Dive</h1>
+            <article>
+                <p>Managing a personal portfolio website can quickly become tedious, especially when manually updating posts, categories, and pages. To streamline this process, I decided to automate the content generation on my website using Python scripting, ensuring scalability and reducing the effort required to maintain a dynamic platform. Below is a detailed breakdown of the steps I took, highlighting the most interesting and impactful parts of this journey.</p>
+                
+                <h2>Step 1: Structuring the Data</h2>
+                <p>The first step in this project was to centralize all the website's content into a single, structured JSON file. This file (<code>posts_metadata.json</code>) serves as the backbone of the automation process, containing metadata for each post, such as:</p>
+                <ul>
+                    <li><strong>Title:</strong> The name of the post.</li>
+                    <li><strong>Categories:</strong> A list of tags associated with the post.</li>
+                    <li><strong>Filename:</strong> The HTML file name for the post.</li>
+                    <li><strong>Date:</strong> The publication date.</li>
+                </ul>
+                <pre>
+            {
+                "title": "How AI is Revolutionizing Real Estate Investment",
+                "categories": ["Machine Learning", "Real Estate"],
+                "filename": "ai-in-real-estate.html",
+                "date": "2025-01-10"
+                "content": "Test content from JSON",
+                "summary": "This article explores how AI is transforming the real estate investment landscape."
+            }
+                </pre>
+                <p>This structure allows the Python script to systematically read, process, and generate the necessary files for the website.</p>
+                
+                <h2>Step 2: Automating Post Creation</h2>
+                <p>Using Python, I automated the creation of individual post pages. Each post page is generated using a predefined HTML template, which dynamically inserts the title, publication date, content placeholder, and category links.</p>
+                <pre>
+            for post in posts:
+                post_path = os.path.join(posts_output_dir, post["filename"])
+                if os.path.exists(post_path):  # Skip existing posts
+                    print(f"Post page {post['filename']} already exists. Skipping.")
+                    continue
+                category_links = ", ".join(
+                    f"&lt;a href='../category/{category.lower().replace(' ', '-')}.html'&gt;{category}&lt;/a&gt;"
+                    for category in post["categories"]
+                )
+                post_content = POST_TEMPLATE.format(
+                    title=post["title"],
+                    date=post["date"],
+                    content="Post content goes here...",  # Placeholder for actual content
+                    category_links=category_links
+                )
+                with open(post_path, "w") as file:
+                    file.write(post_content)
+                </pre>
+                <p>This step includes a check to prevent overwriting existing posts, ensuring that re-running the script doesn’t erase custom edits. Each post also dynamically links back to its relevant categories, improving navigation.</p>
+
+                <h2>Step 3: Creating Category Pages</h2>
+                <p>To organize content effectively, the script generates a dedicated page for each category listed in the metadata. These pages contain a list of all posts associated with the category, complete with links to their respective pages.</p>
+                <pre>
+            CATEGORY_TEMPLATE = """&lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;{category} | Updates&lt;/title&gt;
+                &lt;link rel="stylesheet" href="../styles.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;header&gt;
+                    &lt;h1&gt;{category}&lt;/h1&gt;
+                &lt;/header&gt;
+                &lt;main&gt;
+                    &lt;section class="posts"&gt;
+                        {posts}
+                    &lt;/section&gt;
+                &lt;/main&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+            """
+                </pre>
+                <p>One interesting challenge here was formatting category names for URL-friendly links. For example, "Machine Learning" is converted to <code>machine-learning.html</code> for the file name.</p>
+                
+                <h2>Step 4: Updating the Updates (Index) Page</h2>
+                <p>The <code>updates.html</code> page displays the most recent posts on the website. To keep the homepage engaging, I limited the display to the five most recent posts, sorted by date in descending order.</p>
+                <pre>
+            updates_html = ""
+            for post in sorted(posts, key=lambda x: x["date"], reverse=True)[:5]:  # Limit to 5 posts
+                updates_html += f"""
+                &lt;article&gt;
+                    &lt;h2&gt;&lt;a href="posts/{post['filename']}"&gt;{post['title']}&lt;/a&gt;&lt;/h2&gt;
+                    &lt;p class="date"&gt;Posted on {post['date']}&lt;/p&gt;
+                &lt;/article&gt;
+                """
+                </pre>
+
+                <h2>Step 5: Improving Scalability and Maintainability</h2>
+                <p>To ensure scalability, the script was designed with the following features:</p>
+                <ul>
+                    <li><strong>Centralized Data:</strong> All metadata is stored in one file, making it easy to add or update posts and categories.</li>
+                    <li><strong>File Skipping Logic:</strong> The script checks for existing files before generating them, preventing unnecessary overwriting.</li>
+                    <li><strong>Consistent Design:</strong> Templates ensure that all pages follow the same layout and style, which is maintained via an external CSS file.</li>
+                </ul>
+                
+                <h2>Conclusion</h2>
+                <p>This project demonstrates the power of combining programming and web development to create a dynamic, data-driven website. By automating content generation, I’ve reduced manual effort, ensured scalability, and improved the user experience. These updates reflect my commitment to leveraging technology for efficient and effective solutions.</p>
+                <hr class="separator_category">
+                <p>Categories: <a href='../category/html.html' class='post_category_links'>HTML</a>, <a href='../category/css.html' class='post_category_links'>CSS</a>, <a href='../category/python.html' class='post_category_links'>Python</a>, <a href='../category/json.html' class='post_category_links'>JSON</a>, <a href='../category/web-development.html' class='post_category_links'>Web Development</a>, <a href='../category/scripting.html' class='post_category_links'>Scripting</a>, <a href='../category/automation.html' class='post_category_links'>Automation</a>, <a href='../category/website-updates.html' class='post_category_links'>Website Updates</a></p>
+            </article>
+            <footer>
+                <p>&copy; 2025 Kyle Darden. All rights reserved.</p>
+            </footer>
+        </div>
+     
+    </div>
+    
+</html>
