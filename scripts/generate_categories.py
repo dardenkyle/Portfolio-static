@@ -49,6 +49,7 @@ CATEGORY_TEMPLATE = """
             <nav class="nav-bar">
                 <div class="nav-links">
                     <a href="/">Home</a>
+                    <a href="/posts/" class="current">Posts</a>
                     <a href="/projects/">Projects</a>
                     <a href="/certificates/">Certificates</a>
                     <a href="/contact/">Contact</a>
@@ -128,6 +129,7 @@ POST_TEMPLATE = """
             <nav class="nav-bar">
                 <div class="nav-links">
                     <a href="/">Home</a>
+                    <a href="/posts/" class="current">Posts</a>
                     <a href="/projects/">Projects</a>
                     <a href="/certificates/">Certificates</a>
                     <a href="/contact/">Contact</a>
@@ -216,6 +218,7 @@ UPDATES_TEMPLATE = """
             <nav class="nav-bar">
                 <div class="nav-links">
                     <a href="/" class="current">Home</a>
+                    <a href="/posts/">Posts</a>
                     <a href="/projects/">Projects</a>
                     <a href="/certificates/">Certificates</a>
                     <a href="/contact/">Contact</a>
