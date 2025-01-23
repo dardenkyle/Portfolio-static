@@ -156,7 +156,8 @@ for post in posts:
         print(f"Post page {post['filename']} already exists. Skipping.")
         continue
     category_links = ", ".join(
-        f"<a href='../category/{category.lower().replace(' ', '-')}.html' class='post_category_links'>{category}</a>" for category in post["categories"]
+        f"<a href='../category/{category.lower().replace(' ', '-')}.html' class='post_category_links'>{category}</a>" 
+        for category in post["categories"]
     )
     post_content = POST_TEMPLATE.format(
         title=post["title"],
