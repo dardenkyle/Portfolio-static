@@ -16,4 +16,13 @@
         "content": "Test content from JSON",
         "summary": "This article discusses the new features added to the website and how they improve user experience."
     }
+
+    { 
+        "title": "Stock Market Trends & Volatility Analysis Project Update",
+        "categories": ["Python", "Finance"],
+        "filename": "stock-market-analysis-update_1.html",
+        "date": "2025-01-29",
+        "content": "Test content from JSON",
+        "summary": "This article discusses the new updates to my Stock Market Trends & Volatility Analysis project that I started today using python."
+    }
 ]
