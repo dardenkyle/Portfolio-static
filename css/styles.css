@@ -1,260 +1,268 @@
-body, html {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden; /* Prevent body from scrolling */
+body,
+html {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent body from scrolling */
 }
 
 .container {
-    display: flex;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
 
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
 }
 
 .left-sidebar {
-    background-color: #ffffff;
-    left: 0;
-    width: 20%;
+  background-color: #ffffff;
+  left: 0;
+  width: 20%;
 }
 
 .right-sidebar {
-    background-color: #ffffff;
-    right: 0;
-    width: 20%;
+  background-color: #ffffff;
+  right: 0;
+  width: 20%;
 }
 
 .sidebar .name {
-    text-align: center;
+  text-align: center;
 }
 
 .sidebar .profile-photo {
-    width: 75%;
-    border-radius: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 75%;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sidebar .summary {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .sidebar .links {
-    display: inline-block;
-    align-items: center;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+  display: inline-block;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .sidebar .links a {
-    color: #000000; /* Example color for links */
-    text-decoration: none;
-    padding: 3px;
+  color: #000000; /* Example color for links */
+  text-decoration: none;
+  padding: 3px;
 }
 
 .sidebar .links a:visited {
-    color: #000000; /* Ensure the visited color matches the unvisited color */
-    text-decoration: none; /* Remove underline for visited links */
+  color: #000000; /* Ensure the visited color matches the unvisited color */
+  text-decoration: none; /* Remove underline for visited links */
 }
 
 .sidebar .links a:hover {
-    color: #000000; /* Ensure the visited color matches the unvisited color */
-    text-decoration: underline; /* Remove underline for visited links */
+  color: #000000; /* Ensure the visited color matches the unvisited color */
+  text-decoration: underline; /* Remove underline for visited links */
 }
 
-
 .main-content {
-    margin-left: 20%; /* Leave space for the fixed left sidebar */
-    margin-right: 20%; /* Leave space for the fixed right sidebar */
-    overflow-y: auto; /* Enable scrolling for the main content */
-    width: 60%; /* Ensure it occupies the remaining space */
-    height: 100vh;
-    padding: 5%;
-    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+  margin-left: 20%; /* Leave space for the fixed left sidebar */
+  margin-right: 20%; /* Leave space for the fixed right sidebar */
+  overflow-y: auto; /* Enable scrolling for the main content */
+  width: 60%; /* Ensure it occupies the remaining space */
+  height: 100vh;
+  padding: 5%;
+  box-sizing: border-box; /* Ensure padding doesn't cause overflow */
 }
 
 .main-content .title {
-    font-size: 2rem;
-    text-align: left;
+  font-size: 2rem;
+  text-align: left;
 }
 
 .nav-bar {
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #ffffff;
-    position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  position: fixed;
 }
 
 .nav-bar a {
-    color: #000000;
-    font-size: 1.2rem;
-    text-decoration: none;
-    margin: 0 1rem;
+  color: #000000;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 0 1rem;
 }
 
 .nav-links {
-    display: flex;
-    text-decoration-skip-ink: none; /* Prevent the underline from being interrupted by descenders */
+  display: flex;
+  text-decoration-skip-ink: none; /* Prevent the underline from being interrupted by descenders */
 }
 
 .nav-links a {
-    padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .nav-links a.current {
-    text-decoration: underline;
-    text-decoration-thickness: 3px; /* Match the thickness used on hover */
+  text-decoration: underline;
+  text-decoration-thickness: 3px; /* Match the thickness used on hover */
 }
 
-
-
 a.updates_title {
-    color: #000000;
-    font-size: 1.5rem;
-    text-decoration: none;
+  color: #000000;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 
 a.updates_title:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .post a {
-    color: #000000;
-    font-size: 1.5rem;
-    text-decoration: none;
+  color: #000000;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 
 .post a:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .post .separator {
-    border: 0;
-    height: 1px;
-    background: #000000; /* Adjust color as needed */
-    margin: 20px 0;
+  border: 0;
+  height: 1px;
+  background: #000000; /* Adjust color as needed */
+  margin: 20px 0;
 }
 
 a.post_category_links {
-    color: #000000;
-    text-decoration: none;
-    padding: 0rem 0rem;
+  color: #000000;
+  text-decoration: none;
+  padding: 0rem 0rem;
 }
 
 a.post_category_links:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 a.category_post_link {
-    color: #000000;
-    text-decoration: none;
-    padding: 0rem 0rem;
+  color: #000000;
+  text-decoration: none;
+  padding: 0rem 0rem;
 }
 
 a.category_post_link:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 a.category_category_link {
-    color: #000000;
-    text-decoration: none;
-    padding: 0rem 0rem;
+  color: #000000;
+  text-decoration: none;
+  padding: 0rem 0rem;
 }
 
 a.category_category_link:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 .separator_category {
-    border: 0;
-    height: 1px;
-    background: #000000; /* Adjust color as needed */
-    margin: 10px 0;
+  border: 0;
+  height: 1px;
+  background: #000000; /* Adjust color as needed */
+  margin: 10px 0;
 }
 
 .separator {
-    border: 0;
-    height: 1px;
-    background: #000000; /* Adjust color as needed */
-    margin: 40px 0;
+  border: 0;
+  height: 1px;
+  background: #000000; /* Adjust color as needed */
+  margin: 40px 0;
 }
 
 @media (max-width: 600px) {
-    .nav-bar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .nav-links {
-        flex-direction: column;
-        width: 100%;
-    }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
 
-    .nav-links a {
-        text-align: center;
-        padding: 1rem;
-        width: 100%;
-        box-sizing: border-box;
-    }
+  .nav-links a {
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 a.project-link {
-    color: #000000;
-    text-decoration: none;
+  color: #000000;
+  text-decoration: none;
 }
 
 a.project-link:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .project {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .project-photo {
-    width: 25%;
-    height: auto;
-    border-radius: 8px;
+  width: 25%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .certificate-photo {
-    width: 50%;
-    height: auto;
-    border-radius: 8px;
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .certificate-container {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    width: 100%; /* Ensure the container takes the full width of its parent */
-    height: 100%; /* Optional: Adjust the height as needed */
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  width: 100%; /* Ensure the container takes the full width of its parent */
+  height: 100%; /* Optional: Adjust the height as needed */
+}
+
+.github-project-link img {
+  width: 30px;
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.github-project-link img:hover {
+  transform: scale(1.05);
 }

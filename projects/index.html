@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kyle Darden - Portfolio</title>
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <link
       rel="icon"
       type="image/png"
-      href="../assets/images/ann_favicon_16px.png"
+      href="/assets/images/ann_favicon_16px.png"
     />
   </head>
   <body>
@@ -16,7 +16,7 @@
       <div class="sidebar left-sidebar">
         <h1 class="name">Kyle Darden</h1>
         <img
-          src="../assets/images/profile_picture.jpg"
+          src="/assets/images/profile_picture.jpg"
           alt="Your Photo"
           class="profile-photo"
         />
@@ -60,11 +60,204 @@
             <a href="/contact/">Contact</a>
           </div>
         </nav>
+
+        <!-- CS2 Analytics Project -->
         <div class="project">
           <h2>
-            <a href="bank-churn-prediction.html" class="project-link"
+            <a href="/projects/cs2-analytics/" class="project-link"
+              >CS2 Match and Demo Analytics</a
+            >
+            <a
+              href="https://github.com/dardenkyle/CS2-analytics"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="github-project-link"
+            >
+              <img
+                src="/assets/images/github-mark.png"
+                alt="Descriptive Alt Text"
+              />
+            </a>
+          </h2>
+          <p>
+            A data pipeline and analysis tool for CS2 esports match and player
+            performance using HLTV data and demo file parsing. The system
+            scrapes matches, processes player stats, and supports ML-driven
+            performance insights.
+          </p>
+          <img
+            src="/assets/images/cs2_pipeline.png"
+            alt="CS2 Analytics Screenshot"
+            class="project-photo"
+          />
+          <p>
+            <strong>Tags:</strong> HLTV, Web Scraping, PostgreSQL, Data
+            Pipeline, Python
+          </p>
+        </div>
+        <hr class="separator" />
+
+        <!-- Sales and Customer Analytics Dashboard -->
+        <div class="project">
+          <h2>
+            <a
+              href="/projects/sales-and-customer-analytics-dashboard/"
+              class="project-link"
+              >Sales & Customer Analytics Dashboard</a
+            >
+            <a
+              href="https://github.com/dardenkyle/Sales-and-Customer-Analytics-Dashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="github-project-link"
+            >
+              <img
+                src="/assets/images/github-mark.png"
+                alt="Descriptive Alt Text"
+              />
+            </a>
+          </h2>
+          <p>
+            Analyzed sales performance, customer behavior, and operational
+            efficiency using SQL and Power BI to deliver actionable business
+            insights for a retail environment.
+          </p>
+          <img
+            src="/assets/images/sales_dashboard_1.png"
+            alt="Sales Dashboard Screenshot"
+            class="project-photo"
+          />
+          <p>
+            <strong>Tags:</strong> SQL, Power BI, Dashboard, Data Analysis,
+            Business Intelligence
+          </p>
+        </div>
+        <hr class="separator" />
+
+        <!-- AAPL Stock Market Trends and Volatility Analysis -->
+        <div class="project">
+          <h2>
+            <a href="/projects/aapl-stock-analysis/" class="project-link"
+              >Stock Market Trends</a
+            >
+            <a
+              href="https://github.com/dardenkyle/Stock-Market-Trends"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="github-project-link"
+            >
+              <img
+                src="/assets/images/github-mark.png"
+                alt="Descriptive Alt Text"
+              />
+            </a>
+          </h2>
+          <p>
+            Time series analysis of Apple (AAPL) stock performance, visualized
+            in Tableau, with pattern and volatility analysis using Python and
+            data preprocessing techniques.
+          </p>
+          <img
+            src="/assets/images/stock_dashboard.png"
+            alt="Stock Market Dashboard"
+            class="project-photo"
+          />
+          <p>
+            <strong>Tags:</strong> Python, Tableau, Financial Data, Time Series,
+            Stock Market
+          </p>
+        </div>
+        <hr class="separator" />
+
+        <!-- FoodHub Demand Analysis -->
+        <div class="project">
+          <h2>
+            <a href="/projects/foodhub" class="project-link"
+              >FoodHub Customer Demand Analysis</a
+            >
+            <a
+              href="https://github.com/dardenkyle/FoodHub"
+              rel="noopener noreferrer"
+              class="github-project-link"
+              target="_blank"
+            >
+              <img
+                src="/assets/images/github-mark.png"
+                alt="Descriptive Alt Text"
+              />
+            </a>
+          </h2>
+
+          <p>
+            Conducted exploratory data analysis for a food delivery aggregator.
+            Identified cuisine demand patterns and operational insights to
+            support strategic expansion.
+          </p>
+          <img
+            src="/assets/images/foodhub_eda.png"
+            alt="FoodHub Analysis"
+            class="project-photo"
+          />
+          <p>
+            <strong>Tags:</strong> EDA, Pandas, Numpy, Data Cleaning, Python
+          </p>
+        </div>
+        <hr class="separator" />
+
+        <!-- Support ticket categorization with LLM -->
+        <div class="project">
+          <h2>
+            <a
+              href="/projects/support-ticket-categorization/"
+              class="project-link"
+              >Support Ticket Categorization with LLM</a
+            >
+            <a
+              href="https://github.com/dardenkyle/Support-Ticket-Categorization"
+              rel="noopener noreferrer"
+              class="github-project-link"
+              target="_blank"
+            >
+              <img
+                src="/assets/images/github-mark.png"
+                alt="Descriptive Alt Text"
+              />
+            </a>
+          </h2>
+          <p>
+            Used a Large Language Model to classify and prioritize customer
+            support tickets. The system predicts categories, assigns priority,
+            and estimates resolution times.
+          </p>
+          <img
+            src="/assets/images/support_ticket_nlp.png"
+            alt="LLM Ticket System"
+            class="project-photo"
+          />
+          <p>
+            <strong>Tags:</strong> Generative AI, Transformers, Python, NLP,
+            HuggingFace
+          </p>
+        </div>
+        <hr class="separator" />
+
+        <!-- Bank Churn Prediction (ANNs) -->
+        <div class="project">
+          <h2>
+            <a href="/projects/bank-churn-prediction/" class="project-link"
               >Bank Churn Prediction</a
             >
+            <a
+              href="https://github.com/dardenkyle/Bank-Customer-Churn-Prediction"
+              rel="noopener noreferrer"
+              class="github-project-link"
+              target="_blank"
+            >
+              <img
+                src="/assets/images/github-mark.png"
+                alt="Descriptive Alt Text"
+              />
+            </a>
           </h2>
           <p>
             Predicted bank churn using ANNs. Achieved 78% recall score to
@@ -72,12 +265,12 @@
             the test data.
           </p>
           <img
-            src="../assets/images/bank_churn_loss.png"
+            src="/assets/images/bank_churn_loss.png"
             alt="Project 1"
             class="project-photo"
           />
           <img
-            src="../assets/images/bank_churn_cm.png"
+            src="/assets/images/bank_churn_cm.png"
             alt="Project 1"
             class="project-photo"
           />
@@ -87,8 +280,25 @@
           </p>
         </div>
         <hr class="separator" />
+
+        <!-- Credit Card User Churn Prediction -->
         <div class="project">
-          <h2>Credit Card User Churn Prediction</h2>
+          <h2>
+            <a href="/projects/credit-card-user-churn/" class="project-link"
+              >Credit Card User Churn Prediction</a
+            >
+            <a
+              href="https://github.com/dardenkyle/Credit-Card-Users-Churn-Prediction"
+              rel="noopener noreferrer"
+              class="github-project-link"
+              target="_blank"
+            >
+              <img
+                src="/assets/images/github-mark.png"
+                alt="Descriptive Alt Text"
+              />
+            </a>
+          </h2>
           <p>
             Predicted CC users churn by using multiple classifiers and tuning
             the best performing. Determined most important factors contributing
@@ -96,12 +306,12 @@
             users that would churn, resulting in 0.99% false negatives.
           </p>
           <img
-            src="../assets/images/credit_card_churn_importance.png"
+            src="/assets/images/credit_card_churn_importance.png"
             alt="Project 2"
             class="project-photo"
           />
           <img
-            src="../assets/images/credit_card_churn_cm.png"
+            src="/assets/images/credit_card_churn_cm.png"
             alt="Project 2"
             class="project-photo"
           />
@@ -111,16 +321,33 @@
           </p>
         </div>
         <hr class="separator" />
+
+        <!-- Seedling Classification using CNNs -->
         <div class="project">
-          <h2>Seedling Classification using CNNs</h2>
+          <h2>
+            <a href="/projects/seedling-classification/" class="project-link"
+              >Seedling Classification using CNNs</a
+            >
+            <a
+              href="https://github.com/dardenkyle/Image-classification-using-CNNs"
+              rel="noopener noreferrer"
+              class="github-project-link"
+              target="_blank"
+            >
+              <img
+                src="/assets/images/github-mark.png"
+                alt="Descriptive Alt Text"
+              />
+            </a>
+          </h2>
           <p>Classified images of seedling using CNNs.</p>
           <img
-            src="../assets/images/seedling_classification_accuracy.png"
+            src="/assets/images/seedling_classification_accuracy.png"
             alt="Project 3"
             class="project-photo"
           />
           <img
-            src="../assets/images/seedling_classification_seedling.png"
+            src="/assets/images/seedling_classification_seedling.png"
             alt="Project 3"
             class="project-photo"
           />
@@ -130,6 +357,43 @@
           </p>
         </div>
         <hr class="separator" />
+
+        <!-- Titanic Survival Prediction (Kaggle)-->
+        <div class="project">
+          <h2>
+            <a
+              href="https://github.com/dardenkyle/Titanic-Kaggle-Submission"
+              class="project-link"
+              >Titanic Survival Prediction</a
+            >
+            <a
+              href="https://github.com/dardenkyle/Titanic-Kaggle-Submission"
+              rel="noopener noreferrer"
+              class="github-project-link"
+              target="_blank"
+            >
+              <img
+                src="/assets/images/github-mark.png"
+                alt="Descriptive Alt Text"
+              />
+            </a>
+          </h2>
+          <p>
+            Kaggle project to predict Titanic passenger survival using feature
+            engineering and scikit-learn classification models.
+          </p>
+          <img
+            src="/assets/images/titanic_model.png"
+            alt="Titanic Prediction"
+            class="project-photo"
+          />
+          <p>
+            <strong>Tags:</strong> Kaggle, Logistic Regression, Feature
+            Engineering, Python
+          </p>
+        </div>
+        <hr class="separator" />
+
         <!-- Add more projects as needed -->
         <footer>
           <p>&copy; 2025 Kyle Darden. All rights reserved.</p>
