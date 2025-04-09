@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Test</title>
+  </head>
+  <body>
+    <h1>FormSubmit Test</h1>
+    <form action="https://formsubmit.co/el/curovo" method="POST">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Message" required></textarea>
+
+      <input type="hidden" name="_next" value="/contact/thank-you" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="text" name="_honey" style="display: none" />
+
+      <button type="submit">Send</button>
+    </form>
+  </body>
+</html>
