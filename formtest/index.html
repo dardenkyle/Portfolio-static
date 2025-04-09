@@ -1,21 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Form Test</title>
-  </head>
-  <body>
-    <h1>FormSubmit Test</h1>
-    <form action="https://formsubmit.co/el/curovo" method="POST">
-      <input type="text" name="name" placeholder="Name" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <textarea name="message" placeholder="Message" required></textarea>
+<form
+  action="https://formsubmit.co/darden_kyle@hotmail.com"
+  method="POST"
+  target="_blank"
+  novalidate
+>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" placeholder="Your Name" required />
 
-      <input type="hidden" name="_next" value="/contact/thank-you" />
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="text" name="_honey" style="display: none" />
+  <label for="email">Email:</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="Your Email"
+    required
+  />
 
-      <button type="submit">Send</button>
-    </form>
-  </body>
-</html>
+  <label for="message">Message:</label>
+  <textarea
+    id="message"
+    name="message"
+    placeholder="Your Message"
+    rows="5"
+    required
+  ></textarea>
+
+  <!-- Spam prevention -->
+  <input type="text" name="_honey" style="display: none" />
+  <input type="hidden" name="_captcha" value="false" />
+  <input
+    type="hidden"
+    name="_next"
+    value="https://kyledarden.com/contact/thank-you/"
+  />
+
+  <button type="submit">Send Message</button>
+</form>
