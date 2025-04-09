@@ -65,6 +65,7 @@
             action="https://formsubmit.co/el/curovo"
             method="POST"
             target="_blank"
+            nonvalidate
           >
             <label for="name">Name:</label>
             <input
@@ -97,7 +98,7 @@
             <input type="text" name="_honey" style="display: none" />
 
             <!-- Success redirect URL -->
-            <input type="hidden" name="_next" value="/contact/thank-you" />
+            <input type="hidden" name="_next" value="./contact/thank-you" />
 
             <button type="submit">Send Message</button>
           </form>
