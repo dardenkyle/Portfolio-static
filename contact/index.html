@@ -68,37 +68,21 @@
             novalidate
           >
             <label for="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your Name"
-              required
-            />
+            <input type="text" id="name" name="name" required />
 
             <label for="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-            <br />
+            <input type="email" id="email" name="email" required />
+
             <label for="message">Message:</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Your Message"
-              rows="5"
-              required
-            ></textarea>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
-            <!-- Optional honeypot field to prevent spam -->
             <input type="text" name="_honey" style="display: none" />
-
-            <!-- Success redirect URL -->
-            <input type="hidden" name="_next" value="/contact/thank-you/" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://kyledarden.com/contact/thank-you/"
+            />
 
             <button type="submit">Send Message</button>
           </form>
