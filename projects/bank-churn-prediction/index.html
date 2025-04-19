@@ -78,11 +78,54 @@
                    <a href="/contact/">Contact</a>
             </nav>
             <article>
-            <h1>Bank Churn Prediction</h1>
-            <p class="date">Posted on 2025-01-22</p>
-            <p>This is a detailed explanation of my Bank Churn Prediction project completed in python.</p>
+            <h1>Bank Customer Churn Prediction Using Artificial Neural Networks</h1>
+            <p class="date">Posted on 2025-01-22</p> 
+            <p><strong>Tags:</strong> <code>Python</code>, <code>TensorFlow</code>, <code>Keras</code>, <code>ML Classification</code>, <code>ANN</code>, <code>Feature Engineering</code></p>
             <hr class="separator_category">
-            <p>Categories: <a href='/category/machine-learning.html' class='post_category_links'>Machine Learning</a>, <a href='/category/real-estate.html' class='post_category_links'>Real Estate</a>, <a href='/category/python.html' class='post_category_links'>Python</a></p>
+
+            <h4>Problem:</h4>
+            <p>
+              A mid-sized bank wanted to proactively identify customers at high risk of churn so that retention strategies could be implemented before accounts were closed. The goal was to build a predictive model that could accurately forecast churn using historical banking data.
+            </p>
+
+            <hr class="separator_category">
+
+            <h4>Approach:</h4>
+            <ul>
+              <li>Cleaned and explored the dataset, which included customer demographics, account activity, and tenure</li>
+              <li>Performed feature engineering, including:
+                <ul>
+                  <li>One-hot encoding for categorical variables</li>
+                  <li>Scaling and normalization for continuous features</li>
+                </ul>
+              </li>
+              <li>Built an <strong>Artificial Neural Network (ANN)</strong> using TensorFlow/Keras with:
+                <ul>
+                  <li>Input layer for engineered features</li>
+                  <li>Hidden layers using ReLU activation</li>
+                  <li>Sigmoid output for binary classification (churn vs. retain)</li>
+                </ul>
+              </li>
+              <li>Evaluated model performance using accuracy, precision, and recall</li>
+            </ul>
+
+            <hr class="separator_category">
+
+            <h4>Outcome:</h4>
+            <ul>
+              <li>Achieved strong model performance with balanced accuracy and recall across churn classes</li>
+              <li>Enabled segmentation of customers by churn probability for targeted retention campaigns</li>
+              <li>Demonstrated how ANN models can outperform traditional classifiers when nonlinear relationships are present in customer behavior data</li>
+            </ul>
+
+            <hr class="separator_category">
+
+            <p>
+              <strong>Repo:</strong> <a href="https://github.com/dardenkyle/Bank-Customer-Churn-Prediction" target="_blank">GitHub - Bank Customer Churn Prediction</a><br>
+              <strong>Demo:</strong> <em>(Add Jupyter Notebook render or dashboard link if available)</em>
+            </p>
+
+            <hr class="separator_category">
             </article>
             <footer>
                 <p>&copy; 2025 Kyle Darden. All rights reserved.</p>

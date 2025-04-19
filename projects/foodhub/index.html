@@ -80,45 +80,54 @@
             <article>
             <h1>FoodHub Demand Analysis</h1>
             <p class="date">Posted on 2025-09-2025</p>
-
-            <p><strong>Tags:</strong> <code>Python</code>, <code>Scikit-Learn</code>, <code>Pandas</code>, <code>ML Classification</code>, <code>Feature Engineering</code></p>
-
-            <hr>
+            <p><strong>Tags:</strong> <code>Python</code>, <code>Pandas</code>, <code>Seaborn</code>, <code>Matplotlib</code>, <code>Exploratory Data Analysis</code>, <code>Customer Analytics</code></p>
+            <hr class="separator_category">
 
             <h4>Problem:</h4>
             <p>
-              FoodHub, a fictional food delivery platform, wanted to identify customers likely to stop using their service so they could target retention campaigns more effectively. The challenge was to build a classification model that predicts churn with strong precision while minimizing false positives.
-            </p>
-
-            <hr>
-
-            <h4>Approach:</h4>
-            <ul>
-              <li>Cleaned and explored customer behavioral data, including order history, frequency, and feedback</li>
-              <li>Engineered key features such as days since last order, satisfaction score, and delivery frequency</li>
-              <li>Trained multiple classification models including Logistic Regression, Decision Tree, and Random Forest</li>
-              <li>Optimized model using cross-validation and focused on improving <strong>precision</strong> to reduce unnecessary outreach</li>
-              <li>Identified top features influencing churn using feature importance scores</li>
-            </ul>
-
-            <hr>
-
-            <h4>Outcome:</h4>
-            <ul>
-              <li>Achieved <strong>98% precision</strong> on validation set using a tuned Random Forest model</li>
-              <li>Enabled the business to focus on high-probability churn customers for targeted retention efforts</li>
-              <li>Demonstrated potential cost savings by reducing broad incentive campaigns</li>
-            </ul>
-
-            <hr>
-
-            <p>
-              <strong>Repo:</strong> <a href="https://github.com/dardenkyle/FoodHub" target="_blank">GitHub - FoodHub Churn Prediction</a><br>
-              <strong>Demo:</strong> <em>(Add dashboard or model visualization link if available)</em>
+              FoodHub, a fictional food delivery platform, sought to better understand customer ordering behavior and operational inefficiencies. The objective was to explore order data to uncover trends, performance issues, and opportunities for strategic improvements in customer satisfaction and logistics.
             </p>
 
             <hr class="separator_category">
-            <p>Categories: <a href='/category/machine-learning.html' class='post_category_links'>Machine Learning</a>, <a href='../category/real-estate.html' class='post_category_links'>Real Estate</a>, <a href='../category/python.html' class='post_category_links'>Python</a></p>
+
+            <h4>Approach:</h4>
+            <ul>
+              <li>Cleaned and explored order-level data using <code>Pandas</code></li>
+              <li>Performed Exploratory Data Analysis (EDA) to identify trends in:
+                <ul>
+                  <li>Order volume over time</li>
+                  <li>Cuisine popularity by region</li>
+                  <li>Customer ratings and satisfaction</li>
+                </ul>
+              </li>
+              <li>Visualized findings using <code>Seaborn</code> and <code>Matplotlib</code> to illustrate key business patterns</li>
+              <li>Analyzed peak demand days and hours, along with delivery performance metrics</li>
+            </ul>
+
+            <hr class="separator_category">
+
+            <h4>Outcome:</h4>
+            <ul>
+              <li>Identified that weekends drive significantly higher order volumes, suggesting operational planning opportunities</li>
+              <li>Uncovered American and Italian cuisines as top performers — insights for promotional targeting</li>
+              <li>Observed a negative correlation between delivery times and customer satisfaction, indicating a need for better route optimization and delivery staffing</li>
+              <li>Generated business recommendations to:
+                <ul>
+                  <li>Enhance delivery logistics during peak hours</li>
+                  <li>Boost marketing on high-performing cuisines</li>
+                  <li>Improve delivery speed to raise customer ratings</li>
+                </ul>
+              </li>
+            </ul>
+
+            <hr class="separator_category">
+
+            <p>
+              <strong>Repo:</strong> <a href="https://github.com/dardenkyle/FoodHub" target="_blank">GitHub - FoodHub Order Analysis</a><br>
+              <strong>Demo:</strong> <em>(Add visuals or interactive report link if available)</em>
+            </p>
+
+            <hr class="separator_category">
             </article>
             <footer>
                 <p>&copy; 2025 Kyle Darden. All rights reserved.</p>

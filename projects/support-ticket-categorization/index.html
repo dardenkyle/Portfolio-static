@@ -78,11 +78,50 @@
                    <a href="/contact/">Contact</a>
             </nav>
             <article>
-            <h1>Support Ticket Categorization</h1>
+            <h1>Support Ticket Categorization with NLP and Transformers</h1>
             <p class="date">Posted on 2025-09-2025</p>
-            <p>This is a detailed explanation of my Bank Churn Prediction project completed in python.</p>
+            <p><strong>Tags:</strong> <code>Python</code>, <code>HuggingFace</code>, <code>Transformers</code>, <code>Mistral 7B</code>, <code>NLP</code>, <code>Text Classification</code>, <code>LLMs</code></p>
+
             <hr class="separator_category">
-            <p>Categories: <a href='/category/machine-learning.html' class='post_category_links'>Machine Learning</a>, <a href='../category/real-estate.html' class='post_category_links'>Real Estate</a>, <a href='../category/python.html' class='post_category_links'>Python</a></p>
+
+            <h4>Problem:</h4>
+            <p>
+              A fictional support team needed an automated system to classify incoming support tickets by topic and urgency to reduce manual triage and improve response times. The goal was to deploy an NLP model that could intelligently label tickets and optionally generate smart summaries or suggested responses.
+            </p>
+
+            <hr class="separator_category">
+
+            <h4>Approach:</h4>
+            <ul>
+              <li>Preprocessed ticket text for language modeling (cleaning, lowercasing, removing stopwords, etc.)</li>
+              <li>Used the <code>Mistral 7B</code> large language model via HuggingFace to fine-tune a multi-class classification head</li>
+              <li>Built a Python pipeline to:
+                <ul>
+                  <li>Accept raw ticket data</li>
+                  <li>Classify each ticket into a category (e.g., billing, tech issue, general inquiry)</li>
+                  <li>Store classified results in a structured format for downstream automation</li>
+                </ul>
+              </li>
+              <li>Integrated the model into a backend process with optional summarization for agent handoff</li>
+            </ul>
+
+            <hr class="separator_category">
+
+            <h4>Outcome:</h4>
+            <ul>
+              <li>Successfully classified support tickets by category with high accuracy</li>
+              <li>Reduced time needed for manual triage, enabling faster routing to the correct department</li>
+              <li>Demonstrated potential to scale into a live workflow using fine-tuned LLMs for NLP ops</li>
+            </ul>
+
+            <hr class="separator_category">
+
+            <p>
+              <strong>Repo:</strong> <a href="https://github.com/dardenkyle/Support-Ticket-Categorization" target="_blank">GitHub - Support Ticket NLP Classifier</a><br>
+              <strong>Demo:</strong> <em>(Add CLI or web app interface link if available)</em>
+            </p>
+
+            <hr class="separator_category">
             </article>
             <footer>
                 <p>&copy; 2025 Kyle Darden. All rights reserved.</p>
