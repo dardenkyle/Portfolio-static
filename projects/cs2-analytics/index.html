@@ -80,7 +80,54 @@
             <article>
             <h1>CS2 Professional Match Analytics Pipeline</h1>
             <p class="date">Posted on 2025-09-2025</p>
-            <p>This is a detailed explanation of my Bank Churn Prediction project completed in python.</p>
+
+            <p><strong>Tags:</strong> <code>Python</code>, <code>PostgreSQL</code>, <code>Web Scraping</code>, <code>Streamlit</code>, <code>Data Engineering</code>, <code>ETL</code></p>
+
+            <hr>
+
+            <h4>Problem:</h4>
+            <p>
+              Counter-Strike 2 players and esports bettors lack structured, up-to-date data on player performance and match history. HLTV provides rich insights, but data is fragmented and hard to access or analyze at scale. This project aimed to centralize CS2 performance data and make it accessible for analysis, betting strategies, and personal improvement.
+            </p>
+
+            <hr>
+
+            <h4>Approach:</h4>
+            <ul>
+              <li>Engineered a modular scraping and parsing pipeline using <code>SeleniumBase</code> to extract match, player, and map-level data from HLTV</li>
+              <li>Structured the data into a PostgreSQL database with:
+                <ul>
+                  <li>Matches, players, maps, and historical team data</li>
+                  <li>Snapshot tracking for team rosters, player transfers, and aliases</li>
+                  <li>Composite keys, foreign constraints, and indexing for performance</li>
+                </ul>
+              </li>
+              <li>Built queue-based scraping architecture to support scalable data ingestion</li>
+              <li>Developed a Streamlit frontend for displaying match stats, trends, and insights</li>
+              <li>Designed system for future demo file parsing and advanced analytics (e.g. positioning, utility usage)</li>
+            </ul>
+
+            <hr>
+
+            <h4>Outcome:</h4>
+            <ul>
+              <li>Centralized historical CS2 match and player data into a queryable, auditable PostgreSQL schema</li>
+              <li>Delivered an early-stage Streamlit dashboard for:
+                <ul>
+                  <li>Team and player performance trends</li>
+                  <li>Map win/loss rates and event metadata</li>
+                  <li>Scouting insights for players, bettors, or analysts</li>
+                </ul>
+              </li>
+              <li>Built a scalable architecture to support future ML modeling (e.g. win prediction, rating inflation detection)</li>
+            </ul>
+
+            <hr>
+
+            <p>
+              <strong>Repo:</strong> <a href="https://github.com/dardenkyle/CS2-analytics" target="_blank">GitHub - CS2 Analytics</a><br>
+              <strong>Demo:</strong> <em>(Add Streamlit app link or screenshots if available)</em>
+            </p>
             <hr class="separator_category">
             <p>Categories: <a href='/category/machine-learning.html' class='post_category_links'>Machine Learning</a>, <a href='../category/real-estate.html' class='post_category_links'>Real Estate</a>, <a href='../category/python.html' class='post_category_links'>Python</a></p>
             </article>
